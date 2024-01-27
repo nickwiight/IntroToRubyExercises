@@ -1,0 +1,62 @@
+I started learning programming through Unity C# scripts. Any note may compare a ruby behavior to a C# behavior, though I will try to limit that to language behavior only as much as possible.
+
+irb stands for interactive ruby, and is the command to use when in the terminal to execute one line in ruby to test its output. This is useful if I want to check a line of ruby code without creating a new document to run. Run irb on its own to enter a new mode, then type out ruby commands.
+
+In strings, single quotes can exist in double quotes, but not in single quotes without the escape character.
+
+The escape character is \.
+
+String interpolation only works with double quotes. Yet another reason for double quote suppremacy.
+
+String interpolation syntax: #{ruby_expression}
+
+Symbols are a better human readable reference than strings. Symbols should be used when you don't intend to print its value on the screen or change it. Symbols are referred to as immutable. Symbol names must meet variable name conventions, unless surrounded with quotes.
+
+Symbol syntax: :name_for_symbol
+Special symbol syntax for hashes: name_for_symbol: value
+
+Integers are whole numbers only, floats have decimal points.
+
+nil is nothing, or, more specifically, the absence of anything. Same as C# null. Check for nil with .nil? nil always acts as false when used in an expression, but does not == false. 
+
+Operations work as expected except exponents, which are represented with ** instead of ^. 
+
+Modulo and remainder operations work identiclly for positive numbers, but differently with negative numbers. 
+
+ a  |  b | a % b | a.remainder(b)
+ 17 |  5 |   2   |      2
+ 17 | -5 |  -3   |      2
+-17 |  5 |   3   |     -2
+-17 | -5 |  -2   |     -2
+
+Dividing integers results in an integer, decimals are truncated. Using a float for at least one of the numbers in a math operation returns a floath with a decimal.
+
+Equality operations work as expected. x == y returns true if both values are the same and of the same literal type. != also exists, but feels as not necessary thanks to the unless keyword, which runs code if the supplied bool is false. 
+
+These two execute the same:
+print "Is not equal" if x != y
+print "Is not equal" unless x == y
+
+String concatenation works as expected. "foo" + "bar" = "foobar". Only strings can be concatenated with a string. "foo" + 1 results in an error. "foo" + 1.to_s results in "foo1"
+
+Ruby has many type conversion functions built in. If only they were fully spelled out. I would much prefer .to_s and .to_a to be .to_string and .to_array, but alas.
+
+Converting a string to another type acts similarly to converting a number type to another. If there are any alpha characters, it returns 0. Otherwise .to_i forces the string to be an integer, even if it had decimal places and .to_f forces the string to be a float with decimals, even if the string doesn't have any decimals. Using a conversion method on the same literal (ex. "String".to_s) results in the same output as the input. Single value literals can't be converted into an array.
+
+Arrays are ordered lists. Placed in []. Values in an array are accessed by their index. array[0] returns the first value in the array array. 
+
+Hashes are key-value pairs. It's a dictionary by another name. When creating hashes, use the hash rocket (=>), unless using symbols for keys.
+
+string_key_hash = {
+	"one" => "value",
+	"two" => "value 2"
+}
+
+symbol_key_hash = {
+	one: "value",
+	two: "value 2"
+}
+
+Keys and values both can be of any literal. Keys must be unique within the hash. Retrieve values by passing a key in []. string_key_hash["one"] == "value". symbol_key_hash[:two] == "value 2".
+
+Ruby expressions always return a value, even if the return keyword is not used. A method always returns the last expression evaluated. puts does not return what was printed to the screen, but nil.
