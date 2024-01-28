@@ -1,0 +1,67 @@
+Variables store referenceable information. They also give data a human readable name.
+
+Naming variables can be difficult or tricky. Variable names should be accurate and
+descriptive.
+
+Assign variables with =. Ruby is a dynamically typed language, so any variable can hold
+any literal at any time. 
+
+The following will not throw an error:
+a = 4
+a = "four"
+
+gets waits for user input. The entered string can be saved into a variable. Gets forces
+a newline to the end of input and can be chopped off with .chomp. .chomp can be added
+to any string to remove any carriage return characters at the end.
+
+Variables have different scopes. Variables defined in a method can only be accessed
+by that method, for example. 
+
+Blocks are code that follows a method invocation. Variables defined in a block can only
+be referenced by that block. Blocks can reference variables defined outside of their
+scope, however. 
+
+a = 5
+
+3.times do |n|
+	a = 3
+	b = 5
+end
+
+puts a
+=> 3
+puts b
+=> error: undefined local variable
+
+Blocks should use single line {} for one line blocks or do/end for multiline blocks.
+
+Blocks define arguments by putting them between ||.
+
+There are 5 kinds of variables:
+- constants: declared with all caps. Used for data that doesn't change.
+  constants are not forced static by ruby, but will throw a warning when changing a 
+  constant. Constants are available in all scopes of an application.
+
+  GRAVITY = 9.8
+
+- global variable: declared by starting with a $. Global variables are available 
+  throughout the app, overriding all scope boundries. Global variables are used 
+  sparingly by ruby users.
+
+  $var = "global"
+
+- class variable: declared by starting a variable with @@. Accessible by all instances
+  of the class they were declared in. Class variables cannot be initialized in a 
+  method. 
+
+  @@var = "class"
+
+- instance variable: declared by starting a variable with @. Accessible by only the 
+  the specific instance of the parent class. 
+
+  @var = "instance"
+
+- local variable: most common variable. Obeys all scope boundries. Defined by declaring
+  a name without any prefixes or without using all caps.
+
+  var = "local"
