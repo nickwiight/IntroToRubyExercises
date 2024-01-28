@@ -1,0 +1,2 @@
+The error says that only one argument (4) was passed into the method calculate_product,
+but it expects 2.

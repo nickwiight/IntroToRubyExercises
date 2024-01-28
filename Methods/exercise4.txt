@@ -1,0 +1,2 @@
+The code would not print anything to the screen. The return would prevent the puts
+method from ever being called.

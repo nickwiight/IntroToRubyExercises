@@ -13,3 +13,5 @@ I started The Basics on January 26th, 2024.
 All Basics exercises were completed on January 26th, 2024.
 
 The Variables exercises were started and completed on January 27th, 2024.
+
+The Method exercises were started and completed on January 27th, 2024.

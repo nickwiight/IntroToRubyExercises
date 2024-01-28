@@ -1,0 +1,8 @@
+1. returns 2
+2. returns nil. puts always returns nil
+3. returns "Joe"? Yes. p returns the value passed to it.
+4. returns "four"
+5. returns nil. print also always returns nil.
+
+It's worth remembering that of the three "print" functions, only p returns a value
+other than nil. 
