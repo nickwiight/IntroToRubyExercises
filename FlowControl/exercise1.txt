@@ -1,0 +1,9 @@
+1 - false
+2 - false
+3 - true    # 4 is a truthy value, so it is treated as true in a logcial expression
+3.5 # 3 is false. I forgot that == requires the same literal, so a bool == integer
+      is false.
+4 - true
+5 - true    # 100/5 = 20, but the ! before it turns it from a truthy integer to false,
+              which compares to !true with an || and becomes true, making the rest
+			  of the expression (which uses only || for the main comparisons) true. 

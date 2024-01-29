@@ -1,0 +1,5 @@
+1 - FALSE
+2 - Did you get it right?  # I technically got this one wrong, but only because I
+forgot the left operand was 3 instead of 2. The variable being two messed with me a bit.
+I DID get 3 when I did the math first, so I'm giving myself the win.
+3 - Alright now!

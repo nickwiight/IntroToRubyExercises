@@ -1,0 +1,89 @@
+Conditionals are forks in your code. Information can only go one way or the other.
+They are based around boolean values and methods to generate bools. They use if 
+statements and comparison and logical operators (<, >, ==, &&, ||, etc) to control 
+the flow of code.
+
+Ruby has if, elsif, and else, like everyone else, but also has unless, which is the
+opposite of if. 
+
+do_something unless some_bool == true
+
+ruby has two one line if methods.
+
+if some_bool then do_something
+do_something if some_bool.
+
+Comparison operators always return a boolean value. When using an operator, the 
+expressions or values used are called left and right operands. 
+
+Comparison Operators
+- ==: is equal to. Some people call it "equal equal". If the left operand is exactly
+  equal to the right operand and of the same literal type, it returns true.
+- !=: is not equal to. Returns true if the left and right operands are not equal or
+  not the same literal type. This type is likely not used very often because using
+  the unless keyword with == is the same.
+- <: less than. Returns true if the left operand is less than the right operand. When 
+  comparing strings, Ruby compares them character by character from left to right.
+  This means "42" < "402" is false. The 4's are identical, so it passes over that 
+  character to 2 < 0, which is false. Cannot compare literals of different types.
+- >: greater than. Returns true if the left operand is greater in value than the 
+  right operand. The same points about less than apply.
+- <=: less than or equal to. Returns true if the left operand is less than or equal
+  to the right operand. Returns true if the left operand is greater in value than the 
+  right operand. The same points about less than apply.
+- >=: greater than or equal to. Returns true if the left operand is greater than 
+  or equal to the right operand. Returns true if the left operand is greater in 
+  value than the right operand. The same points about less than apply.
+- &&: and. Returns true if the left operand and the right operand are both true.
+  Requires both operands to be a bool.
+- ||: or. Returns true if the left or right operand is true. Requires both operands
+  to be a bool.
+- !: not. reverses a bool value. If an expression or bool value is true, turns it false
+  and vice versa.
+
+Ruby has an order of opperaitons for conditoinal and logical operators. Comparison,
+then equality, then &&, finally ||.
+
+Ruby has a ternary operator/expression to handle an if/else chain in one line. 
+some_bool ? value_if_true : value_if_false
+
+Ternary expressions can be passed into a method as a parameter. 
+puts some_bool ? "value if true" : "value if false"
+The above is better than the below
+some_bool ? puts "value if true" : puts "value if false"
+
+Ternary expressions should be used to select between two values, not two operations.
+Another reason why the top ternary is better than the bottom. Ternary expressions 
+should go into a variable, expression, or return statement. If they can't, or shouldn't,
+an if/else expression is better. Ternarys should aim for readability, not berevity.
+
+Case statements are switch statements. 
+
+case variable_to_test_against
+when value_to_compare_1
+  some_action
+when value_to_compare_2
+  some_other_action
+else
+  some_final_acion
+end
+
+If a case statement is used and a value that is not in a when check is used without
+an else clause, it returns nil.
+
+Ruby views any result other than 0, nil, or false as true. if 5 passes.
+
+When using && and ||, ruby returns the last expression evaluated. Ruby stops evaluating
+|| if the left operand is true and && if the left operand is false, so in those cases
+it would return those operands. If ruby keeps evaluating the expression, the right
+operand is returned.
+
+"foo" || nil   => returns "foo"
+nil || "foo"   => returns "foo"
+"foo" || "bar" => returns "foo"
+
+While truthy values like strings can be used with logical operators, it is best
+to actually cast them into a bool at some point, especially if you are saving
+the result of a logical operation into a variable. An easy way to convert to a bool
+is to use !!. This is not not, which returns false on a truthy value, then converts it
+back to true.

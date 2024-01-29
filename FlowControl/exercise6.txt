@@ -1,0 +1,6 @@
+1 - error  # you cannot compare different literal types.
+2 - false  # comparing different literal types returns false.
+3 - false  # 8's are equal, as are 4's. 7 is compared to 6, is greater, so returns false
+4 - true   # same logic as 3, but 7 is greater than 6, so returns true
+5 - false  # 8's, 4's, and 7's are equal. 8 is greater than 0/nil?
+6 - true   # opposite logic to 5.

@@ -1,0 +1,3 @@
+The error is pointing out that the code is missing an end. The if/else chain
+needs an end statement and the method needs its own end statement. You can
+fix the error by adding an end after puts "nope"
