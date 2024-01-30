@@ -1,0 +1,6 @@
+Answer - The block's .call method is not invoked in execute, so the puts isn't activated
+and nothing is printed to the screen. Does it return the block itself?
+
+Post checking answer musings - I guess it makes sense it returns a proc. A block
+isn't an object after all. Interesting that it automatically wraps the block 
+in a proc.

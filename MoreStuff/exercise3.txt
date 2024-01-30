@@ -1,0 +1,2 @@
+Exception handling is the process of methodically handling exceptions and errors. 
+Exception handling keeps a program running even after an exception has occured. 

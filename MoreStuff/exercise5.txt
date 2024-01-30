@@ -1,0 +1,3 @@
+The parameter of execute doesn't begin with & to tell ruby to expect a block. 
+Since you can call a block after a method to iterate on the method's return, 
+ruby thinks line 5 is missing the parameter for execute.

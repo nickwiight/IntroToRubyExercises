@@ -1,0 +1,40 @@
+Regex is a powerful tool for selecting patterns from strings. Rexex expressions are 
+placed within //. Use =~ to compare a string to a regex.
+
+'powerball' =~ /b/  # returns 5, the index of b.
+
+Can use .match on a regex, which returns a MatchData. Returns the match info or
+nil if no match exists. Can also be used as a bool because nil is falsey.
+
+/b/.match('powerball')  # returns #<MatchData "b">
+
+Ruby has many standard libraries with lots of standard funcitons built in.
+Use Math. to access math functions. Use Math: to access math constants like PI.
+
+Use Time. for time related calculations. 
+
+Variables point to a value in memory. Some things create new memory, and some change
+the memory value itself. .map iterates over an array's values, letting you return
+a new array with the values changed. .map! does the same thing, but changes the 
+value in the memory of the array you are iterating over and returns self. 
+
+a = some_array
+b = a
+a.map {|x| x + 2} # this returns a new array and does not change a or b
+a.map! {|x| x + 2} # this modifies the memory a and b are pointing to, changing both
+
+Multiple variables can point to different spots in memory with the same value. 
+
+Blocks can be passed into methods as parameters using the &parameter syntax.
+Blocks must always be the last parameter passed into a method. block.call is used
+to invoke the block. 
+
+Procs are objects wrapped in an object and put into a variable to be passed around.
+Create new procs with Proc.new or proc if immediately setting the block. 
+
+Exception handling deals with handling erros in a predictable way.
+Start exception handling with begin. Use rescue to set code for when an error
+happens. Rescue allows a program to continue running after an error occurs. 
+
+All methods should be declared before coding in main so all the methods are loaded
+into memory before something in main tries to invoke them.
