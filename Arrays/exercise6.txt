@@ -1,0 +1,10 @@
+Trying to get a value out of an array with array[x], x represents an index, so it
+needs to be an integer. The error is saying the string can't be implicitly converted
+to an integer, the way it could if the string passed in was something like: '1'.
+
+The fastest way to fix this is to use the index of 'Margaret'. names[3] = 'jody'
+would replace the last element of names with 'jody'
+
+If it was unexpected to know the index, one could use .find_index.
+names[names.find_index('margaret')] = 'jody' would find the index of 'margaret' and 
+replace its value with 'jody'. 

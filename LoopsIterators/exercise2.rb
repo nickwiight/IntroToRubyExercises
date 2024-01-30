@@ -7,5 +7,6 @@ while input != 'STOP'
   puts 'I repeat what is told to me! Type STOP to end'
   input = gets.chomp
   next if input == 'STOP'
+
   puts "You said '#{input}'"
 end

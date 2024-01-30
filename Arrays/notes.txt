@@ -1,0 +1,47 @@
+An array is an ordered list of elements. Each index of an array can be of any type.
+Arrays are defined between []. .first and .last do what one would expect on an
+array. To get the element at any index, use the array[i] syntax.
+
+Arrays are 0 indexed. The first element in an array is at index 0. 
+
+.pop removes and returns the last item in an array. 
+.push adds an item to the end of an array and returns the whole array. Can use 
+array << item_to_append instead. 
+.unshift adds an item to the front of an array and returns the new array.
+
+Use .map or .collect to iterate over every element in an array and mutate them.
+.map returns the new, mutated array, while not removing the original array.
+
+The difference between .each and .map is that .each returns self while .map returns
+a new array with the mutated values.
+
+Use .delete_at to remove all copies of an item in an array. This mutates the original 
+array destructively and is permenant. .delete_at returns the item removed.
+
+.delete takes in a value, and removes all copies of that value from an array, 
+returning the value.
+
+.uniq removes duplicate values and returns the new array. This is non destructive.
+.uniq! is the destructive version of uniq.
+
+.select iterates over every element in an array and returns any value that returns
+true to the expression provided. This is non destructive.
+
+Arrays can be nested. Call array[i][j] to get an individual element of a nested array.
+array[i] returns the array, if there's one nested at i.
+
+.include? returns true if an array has at least one copy of the passed value.
+
+.flatten makes a nested array a one-dimensional array, and returns the new array.
+.flatten is nondestructive.
+
+.each_index loops over each element in an array, but instead of passing the element
+to the block, it passes the index it's on. 
+.each_with_index is like .each and .each_index, but it passes both the element and
+the index to the block. Element, then index.
+Neither .each_index nor .each_with_index are destructive.
+
+.sort does what it says. It is nondestructive.
+
+.product FOILs the arrays together. [1, 2, 3].product([4,5]) ==
+[[1,4], [1,5], [2, 4], [2, 5], [3, 4], [3, 5]]
