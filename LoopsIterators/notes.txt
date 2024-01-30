@@ -1,0 +1,43 @@
+Loops repeat a block of code until a condition is met. The simplest is loop, which
+loops forever until ctl+c is pressed or a break statement is reached. 
+
+loops work like I expect them to. Break to leave the loop, next to skipp the rest
+of the code in the block and go to the next iteration. Uses do/end or {} syntax.
+Loops are a block and have block scope. Variables introduced in blocks cannot be
+accessed by methods or expressions outside the block, but the block can access
+variables from outside the block.
+
+While does not have its own scope like loop does. It's in whatever scope it was 
+called in.
+
+Until is the opposite of while. It runs until the expression given is true. Until
+is just like while, except for its expression check.
+
+Ruby doesn't have a do/while loop, which always executes its code at least once.
+
+There's another hack to do/while that isn't recommended. The begin/end while loop.
+Begin and end are used for other things in ruby, so while this works, its using a
+tool in the wrong way, so its not recommended.
+
+For loops work mostly like expected. They combine the logical expression and increase
+expression into one expression. They CANNOT be used like foreach loops, use the .each
+method for that. 
+
+for i in 1..10 do
+	some_method
+end
+
+for is not a method, so it doesn't have method scope.
+
+Iteratros are methods that loop over a set of data. This allows you to operate on each
+element in the data.
+
+.each basically equals a for each loop. .each takes a block as a parameter. Place
+the parameters of the block between ||. 
+
+Blocks can be contained between two styles, {} and do/end. Use {} for one line
+operations and do/end for multiline.
+
+Recursion calls a method from within itself. It's used to loop or iterate over data
+without a loop or iterator. Recursion works by having a condition that ends the 
+recusion, causing a resovling cascade. 

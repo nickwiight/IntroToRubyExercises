@@ -1,0 +1,8 @@
+Does .each return the last expression of the last loop of the block? In this case
+it would return 6?
+
+Nope. Returns the data given to it. In this case, the array [1, 2, 3, 4, 5].
+
+That does make more sense upon more thought. It returns self, which is the object
+its being called on. That way if you mutate the object, you're returning the
+mutated object. 

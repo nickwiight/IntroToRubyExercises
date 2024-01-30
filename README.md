@@ -20,3 +20,6 @@ The exercises for Method were completed on January 27th, 2024.
 
 The Flow Controls chapter was started on January 28th, 2024.
 The exercises for Flow Controls were completed on January 28th, 2024.
+
+The Loops & Iterators chapter was started on January 28th, 2024.
+The exercises for Loops and Iterators were completed on January 29th, 2024.
