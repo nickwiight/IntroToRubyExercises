@@ -1,0 +1,2 @@
+The first hash creates a new symbol named x. The second hash uses the value of x,
+"hi there" as its key.

@@ -1,0 +1,34 @@
+A hash is a dictionary. It is comprised of key/value pairs. Values can, themselves
+be key/value pairs.
+
+Hashes can be created with symbol keys in two ways:
+hash1 = { :symbol => "value" }
+hash2 = { symbol: "value" }
+
+If you want to use a different literal for the key, you need to use the first syntax.
+
+Retrieve a value from a hash with hash[:key]. Additionally you can add to a hash with
+hash[:new_key] = "new value"
+
+Use .delete to remove a kvp and return its value. This is destructive.
+
+.merge takes a hash as a parameter and merges the two hashes into one and returns
+a new hash. 
+.merge! merges the two hashes into the hash it was called on destructively.
+
+.each iterates over a hash. It passes both keys and values into the block. 
+
+.empty returns true if the hash is empty. 
+
+.key? returns true if a hash has the passed in key.
+
+.select works just like array selects, but the block can check against both or either
+the keys or values. Returns a new hash with keys and values that meet the evaluation.
+
+.fetch gets a value for a passed in key if the key exists, throws an error otherwise.
+Can set a second, optional, parameter for return if the key doesn't exist.
+
+.to_a returns a 2d array of your hash. It's not destructive.
+
+.keys returns an array of all keys.
+.values returns an array of all values.
