@@ -32,3 +32,5 @@ The exercises for Hashes were completed on January 29th, 2024.
 
 The More Stuff chapter was started on January 30th, 2024.
 The exercises for More Stuff were completed on January 30th, 2024.
+
+The final exercises were completed on January 30th, 2024.

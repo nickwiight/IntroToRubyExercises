@@ -1,0 +1,5 @@
+Hash values can be arrays.
+h = { one: [1,2], two: [3,4] }
+
+Arrays can have hashes as their values
+a = [{a:1, b:2}, {c:3,d:4}]
